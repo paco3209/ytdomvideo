@@ -58,11 +58,19 @@ const App = () => {
   return (
     
     <div className="bg">
-      <SearchBar onSearchTermChange={searchTerm => fetchResource(searchTerm)}/>
-      <VideoDetail video={sldVideo} />
-      <button onClick={clickButton} className="btn btn-primary">Ver siguiente video</button>
-      
-      
+      <header style={{textAlign:"center", marginTop:'10px'}}>
+        <h1>Gloria o Devoto</h1>
+        <p>Videos aleatorios subidos a youtube sin editar. Donde todo empezo <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw">Me at the zoo</a></p>
+      </header>
+      <main>
+        <VideoDetail video={sldVideo} />
+      </main>
+      <div className="btn-next-video">     
+         <button onClick={clickButton} className="btn btn-primary">Ver siguiente video</button>
+      </div>
+      <footer>
+        Hecho por <a href="https://github.com/paco3209"> Fran</a>
+      </footer>
       
       </div>
     

@@ -15,11 +15,15 @@
   max-width: 64px;
 }
 
-.video-detail .details{
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.video-detail{
+  width: 100%; /* you have to have a size or this method doesn't work */
+  height: 400px; /* think about making these max-width instead - might give you some more responsiveness */
+
+   /* positions out of the flow, but according to the nearest parent */
+  top: 0; right: 0; /* confuse it i guess */
+  bottom: 0; left: 0;
+  margin: auto;
+  
 }
 
 .list-group-item{
@@ -29,4 +33,39 @@
 
 .list-group-item:hover{
   background-color: #eee;
+}
+
+.bg{
+  display: grid;
+  height: 100vh;
+  grid-template: 
+  "head"
+  "main" 
+  "button"
+  "footer"
+  
+  ;
+}
+
+header{
+  grid-area: head;
+}
+
+main{
+  grid-area: main;
+  
+}
+
+.btn-next-video{
+  margin-top: 10px;
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+}
+
+footer{
+  
+  display: flex;
+
+  grid-area: footer;
 }

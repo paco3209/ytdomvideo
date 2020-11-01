@@ -11,15 +11,11 @@ const VideoDetail = (props) => {
     const url = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 
     return (
-        <div className="video-detail col-md-8">
-            <div className="embed-responsive embed-responsive-16by9">
-                <iframe className="embed-responsive-item" src={url} allow="autoplay; fullscreen"></iframe>
+        <div className="video-detail">
+            <div className="ebed-responsive embd-responsive-16by9">
+                <iframe className="embed-responsive-item" src={url} style={{height:'400px',width:'100%'}}  allow="autoplay; fullscreen"></iframe>
             </div>
-            <div className="details">
-                <div>{video.snippet.title} creado por {video.snippet.channelTitle}</div>
-                <div>{video.snippet.description}</div>
-                
-            </div>
+           
         </div>
     );
 };
