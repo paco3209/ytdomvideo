@@ -5,6 +5,7 @@
 
 # api keys
 .env
+.README.md
 
 # testing
 /coverage
