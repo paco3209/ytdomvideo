@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ShareButtons from './share_buttons';
+
 const VideoDetail = (props) => {
     const video = props.video;
     
@@ -15,7 +17,7 @@ const VideoDetail = (props) => {
             <div className="ebed-responsive embd-responsive-16by9">
                 <iframe className="embed-responsive-item" src={url} style={{height:'400px',width:'100%'}}  allow="autoplay; fullscreen"></iframe>
             </div>
-           
+            <ShareButtons video={videoId} />
         </div>
     );
 };
